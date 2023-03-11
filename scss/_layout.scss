@@ -1,0 +1,47 @@
+h1,
+.part_number {
+  break-before: column;
+}
+.part_number + h1 {
+  break-before: initial;
+}
+.book-container {
+  padding: 6rem 0;
+}
+.book-wrapper {
+  padding: 0 6rem 0;
+  word-break: break-word;
+  direction: rtl;
+}
+.book {
+  height: calc(100vh - 12rem);
+  width: 100%;
+  overflow: hidden;
+  outline: none;
+  column-width: 500rem;
+  column-count: auto;
+  column-gap: 6rem;
+  column-fill: balance;
+  scrollbar-width: 0;
+  appearance: none;
+  // visibility: hidden;
+  // opacity: 0;
+
+  &.demo {
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    right: 0;
+    bottom: 6rem;
+    width: auto;
+    // visibility: visible;
+    // opacity: 1;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 1023px) {
+    column-count: 2;
+    column-width: inherit;
+  }
+}

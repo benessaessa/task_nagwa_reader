@@ -1,0 +1,121 @@
+:root {
+  --bgColor: 255, 255, 255;
+  --textColor: 0, 0, 0;
+  --darkBg: 0, 0, 0;
+  --greyBg: 245, 245, 245;
+  --lightGreyBg: 255, 255, 255;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  --bgColorRgb: rgba(var(--bgColor), 1);
+  --textColorRgb: rgba(var(--textColor), 1);
+  --darkBgRgb: rgba(var(--darkBg), 1);
+  --greyBgRgb: rgba(var(--greyBg), 1);
+  --lightGreyBgRgb: rgba(var(--lightGreyBg), 1);
+  font-size: 18px;
+  padding: 0;
+  height: 100%;
+
+  .book-container {
+    background-color: var(--bgColorRgb);
+    color: var(--textColorRgb);
+  }
+
+  .blockquote,
+  .epigraph {
+    background-color: var(--greyBgRgb);
+  }
+
+  &.dark {
+    --bgColor: 0, 0, 0;
+    --textColor: 255, 255, 255;
+    --darkBg: 255, 255, 255;
+    --greyBg: 17, 17, 17;
+    --lightGreyBg: 51, 51, 51;
+  }
+  &.warm {
+    --bgColor: 246, 239, 223;
+    --textColor: 0, 0, 0;
+    --darkBg: 239, 201, 118;
+    --greyBg: 242, 228, 197;
+    --lightGreyBg: 246, 239, 223;
+  }
+}
+
+.actions-menu {
+  color: var(--bgColorRgb);
+  box-shadow: 2px 4px 8px rgba($color: #000000, $alpha: 0.1);
+  border-radius: 8px;
+
+  &::after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: var(--textColorRgb);
+    border-width: 6px;
+    margin-left: -6px;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    &:first-child a {
+      border-radius: 8px 0 0 8px;
+    }
+    &:last-child a {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &.unhighlight {
+      display: none;
+    }
+
+    & + li a {
+      border-left: 1px solid rgba(var(--bgColor), 0.2);
+    }
+  }
+  a {
+    color: inherit;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    display: flex;
+    background-color: var(--textColorRgb);
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: rgba(var(--textColor), 0.7);
+      text-decoration: none;
+    }
+  }
+
+  &.has-highlight {
+    .highlight {
+      display: none;
+    }
+    .unhighlight {
+      display: block;
+    }
+  }
+}
+
+.highlighted {
+  background-color: #fff200ad;
+  transition: background-color 0.3s;
+}

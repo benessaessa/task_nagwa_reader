@@ -1,0 +1,32 @@
+.dropdown {
+  position: relative;
+  user-select: none;
+  &.show {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+.dropdown-menu {
+  position: absolute;
+  bottom: 5rem;
+  left: -10px;
+  display: none;
+  min-width: 34.9rem;
+  background-color: var(--lightGreyBgRgb);
+  color: var(--textColorRgb);
+  border-radius: 1.4rem;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.2);
+  z-index: 999;
+  &:before {
+    content: "\f0d7";
+    position: absolute;
+    font-family: $fAwsome;
+    color: var(--lightGreyBgRgb);
+    bottom: -22px;
+    left: 2rem;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+}

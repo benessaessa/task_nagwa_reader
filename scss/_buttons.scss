@@ -1,0 +1,47 @@
+.btn {
+  outline: 0;
+  border: 0;
+  background: none;
+  border-radius: 0.3rem;
+  appearance: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  /*rtl:raw:
+  font-family: "NotoNaskhArabic", sans-serif;
+    */
+}
+.btn-icon-outline-grey {
+  background-color: transparent;
+  border: 0.5px solid #a6a5b2;
+}
+
+.btn-text {
+  color: #333;
+  &:hover {
+    color: #333;
+  }
+}
+.btn-icon {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  img {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+}
+.btn-link {
+  border: 0;
+  background-color: transparent;
+}

@@ -1,0 +1,60 @@
+.f-icon {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    font-family: $fAwsome;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    font-size: inherit;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga";
+  }
+
+  &.brand {
+    &:before {
+      font-family: $fAwsomeBrands;
+      font-weight: 300 !important;
+    }
+  }
+  &.light {
+    &:before {
+      font-weight: 300 !important;
+    }
+  }
+  &.medium {
+    &:before {
+      font-weight: 500 !important;
+    }
+  }
+}
+
+.chevron-double-left-icon:before {
+  content: "\f323";
+}
+.chevron-double-right-icon:before {
+  content: "\f324";
+}
+
+.chevron-right-icon::before {
+  content: "\f054";
+}
+
+.chevron-left-icon::before {
+  content: "\f053";
+}
+
+.cog-icon::before {
+  content: "\f013";
+}

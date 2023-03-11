@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Nagwa Reader</title>
+    <link rel="stylesheet" href="./css/epub.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+
+    <!-- Book Container  -->
+    <div class="book-container">
+      <div class="book-wrapper">
+        <div class="book"></div>
+      </div>
+    </div>
+
+    <!-- Bootom Bar pagination and settings -->
+    <div class="bottom-bar">
+      <div class="book-pagination">
+        <div class="bar-left">
+          <div class="dropdown">
+            <button class="btn-icon-outline-grey btn-icon btn dropdown-toggle">
+              <i class="f-icon cog-icon"></i>
+            </button>
+            <div class="dropdown-menu">
+              <div class="view-config">
+                <div class="font-size">
+                  <button id="pagination-font-smaller" class="btn btn-link">
+                    A
+                  </button>
+                  <button id="pagination-font-reset" class="btn btn-link">
+                    100%
+                  </button>
+                  <button id="pagination-font-bigger" class="btn btn-link">
+                    A
+                  </button>
+                </div>
+                <div class="control-row">
+                  <h5>Color Mode</h5>
+
+                  <div class="color-modes">
+                    <div class="change-color" data-value="white"></div>
+                    <div class="change-color" data-value="dark"></div>
+                    <div class="change-color" data-value="warm"></div>
+                  </div>
+                </div>
+                <div class="control-row show-fonts">
+                  <h5>Font</h5>
+                  <div class="selected-font-family"></div>
+                </div>
+              </div>
+              <div class="fonts">
+                <button class="btn btn-link hide-fonts">
+                  <i class="f-icon chevron-left-icon"></i>
+                  Back
+                </button>
+                <button class="change-font-family" data-value="NotoNaskhArabic">
+                  Noto Naskh Arabic
+                </button>
+                <button class="change-font-family" data-value="tahoma">
+                  Tahoma
+                </button>
+                <button class="change-font-family" data-value="arial">
+                  Arial
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar-right">
+          <button
+            type="button"
+            class="pagination-next-chapter btn-icon-outline-grey btn btn-icon"
+          >
+            <i class="f-icon chevron-double-left-icon"></i>
+          </button>
+          <button
+            type="button"
+            class="pagination-next-page btn-icon-outline-grey btn btn-icon"
+          >
+            <i class="f-icon chevron-left-icon"></i>
+          </button>
+          <span class="pagination-info">
+            <span class="pagination-current-page"></span> /
+            <span class="pagination-pages"></span>
+          </span>
+          <button
+            type="button"
+            class="pagination-prev-page btn-icon-outline-grey btn btn-icon"
+          >
+            <i class="f-icon chevron-right-icon"></i>
+          </button>
+          <button
+            type="button"
+            class="pagination-prev-chapter btn-icon-outline-grey btn btn-icon"
+          >
+            <i class="f-icon chevron-double-right-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <span class="pagination-percent">
+        <span></span>
+      </span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
